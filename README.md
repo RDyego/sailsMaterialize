@@ -1,2 +1,2 @@
 # sailsMaterialize 
-# sailsMaterialize 
+sails withMaterialize CSS
