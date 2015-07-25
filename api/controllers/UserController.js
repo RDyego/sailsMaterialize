@@ -17,15 +17,20 @@ module.exports = {
 		};	
 		
 		User.create(userViewModel).exec(function (err, userCreated) {
-			console.log(userViewModel);
-			if (err) return res.redirect('/user/new');
+			
+			if (err) {
+				req.session.flash = {
+					err: err
+				} 
+				return res.redirect('/user/new');
+			}
+			
 			res.redirect('/user/index');
 		});
 	},
 	
 	index: function (req, res, next) {
 		User.find({}).exec(function (err, usersFound) {
-			console.log(usersFound);
 			if (err) return next(err);
 			res.view({users: usersFound});
 		});	

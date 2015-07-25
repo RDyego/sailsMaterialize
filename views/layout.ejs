@@ -27,28 +27,8 @@
             + Import stylesheets from other directories
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--STYLES-->
-    <link rel="stylesheet" href="/bower_components/materialize/font/material-design-icons/Material-Design-Icons.eot">
-    <link rel="stylesheet" href="/bower_components/materialize/font/material-design-icons/Material-Design-Icons.svg">
-    <link rel="stylesheet" href="/bower_components/materialize/font/material-design-icons/Material-Design-Icons.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/material-design-icons/Material-Design-Icons.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/material-design-icons/Material-Design-Icons.woff2">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Bold.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Bold.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Bold.woff2">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Light.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Light.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Light.woff2">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Medium.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Medium.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Medium.woff2">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Regular.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Regular.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Regular.woff2">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Thin.ttf">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Thin.woff">
-    <link rel="stylesheet" href="/bower_components/materialize/font/roboto/Roboto-Thin.woff2">
     <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
@@ -125,5 +105,13 @@
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
     <!--SCRIPTS END-->
+     <script>
+       $( document ).ready( function () {
+       <% if(flash && flash.err) { %>
+              Materialize.toast('Error!', 4000);
+        <% } %>
+       });
+     </script>
+  
   </body>
 </html>
