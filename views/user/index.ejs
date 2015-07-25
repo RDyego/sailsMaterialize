@@ -1,0 +1,17 @@
+<table class="bordered hoverable responsive-table">
+	<thead>
+	  <tr>
+	      <th data-field="name">Name</th>
+	      <th data-field="email">Email</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		<% _.each(users, function (user) { %>
+		  <tr>
+		    <td><%= user.name %></td>
+		    <td><%= user.email %></td>
+		  </tr>
+	  	<% }) %>
+	</tbody>
+</table>

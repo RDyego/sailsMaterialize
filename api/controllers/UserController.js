@@ -17,6 +17,7 @@ module.exports = {
 		};	
 		
 		User.create(userViewModel).exec(function (err, userCreated) {
+			console.log(userViewModel);
 			if (err) return res.redirect('/user/new');
 			res.redirect('/user/index');
 		});
@@ -24,6 +25,7 @@ module.exports = {
 	
 	index: function (req, res, next) {
 		User.find({}).exec(function (err, usersFound) {
+			console.log(usersFound);
 			if (err) return next(err);
 			res.view({users: usersFound});
 		});	
