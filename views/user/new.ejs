@@ -11,17 +11,17 @@
   } 
 %>
   <div class="container">
-    <div class="row center">
+    <div class="card center">
       <form action="/user/create" method="post" class="col s12">
         <div class="row">
-          <div class="input-field col s12">
-            <input id="name" name="name" type="text" class="validate">
+            <div class="input-field col s12">
+            <input id="name" name="name" type="text" class="validate <%=(!!errorName)?'invalid':''%>">
             <label for="name" data-error="Invalid Name" data-success="Okah...">Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" name="email" type="email" class="validate <%=(!!errorName)?'invalid':''%>">
+            <input id="email" name="email" type="email" class="validate">
             <label for="email" data-error="Invalid Email" data-success="Nice!!!">Email</label>
           </div>
         </div>
@@ -34,3 +34,4 @@
       </form>
     </div>
   </div>
+  

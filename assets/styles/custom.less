@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+table {
+	margin-top: 20px;
+	width: 600px;
+}
+
+.card {
+	margin-top: 20px;
+	width: 600px;
+	padding-left: 20px;
+	padding-right: 20px;
+	input {
+		display: block;
+	}
+}
+
+.container {
+  position: relative;
+  width: 100%;
+	.card {
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
+	}
+}
+
